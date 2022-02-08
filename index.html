@@ -1,0 +1,249 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>Home — Adrian Doni</title>
+
+	<meta name="description" content="">
+	<meta name="author" content="Adrian Doni">
+
+	<link rel="icon" href="logo-fill-doniad.ico">
+	<link rel="icon" href="images/logo-fill-doniad.svg" type="image/svg+xml">
+
+	<link rel="stylesheet" href="style.css?v=1.0">
+	<link rel="stylesheet" href="assets/css/app.css?v=1.0">
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/gsap.js"></script>
+	<script src="assets/js/scroll-trigger.js"></script>
+
+</head>
+
+<body>
+	<div id="page" class="site">
+		<div class="loader">
+			<div class="progress">
+				<div id="bar">
+					<div id="barconfirm">0%</div>
+				</div>
+				<div id="percent"></div>
+			</div>
+		</div>
+
+		<div id="site-header" class="site-header">
+			<a class="logo-branding link" name="Home" href="/">
+				<span>adrian</span>
+			</a>
+
+			<div class="site-menu">
+				<div class="navBefore"></div>
+				<div class="menu-navigation">
+					<nav class="main-nav">
+						<a href="#projects" class="nav-item link">projects</a>
+						<a href="#experiments" class="nav-item link">experiments</a>
+						<a href="#contact" class="nav-item link">contact</a>
+					</nav>
+				</div>
+			</div>
+			
+
+			<button id="hamburger" aria-pressed="false" class="hamburger btn-toggle-state">
+				<span class="first"></span>
+				<span class="second"></span>
+				<span class="third"></span>
+			</button>
+		</div>
+
+		<main id="site-main" class="site-main">
+			<div class="entry-content">
+				<section class="intro flex-center h-screen">
+
+					<div id="galaxy">
+						<div class="bg"></div>
+						<div class="stars-back"></div>
+						<div class="stars-middle"></div>
+						<div class="stars-front"></div>
+						<div class="bg center"></div>
+					</div>
+
+					<div class="intro-content">
+						<span class="date-edition">· hello world! ·</span>
+						<h1 class="split-text-load">
+							<span class="o-hidden">
+								<span>Adrian Doni</span>
+							</span>
+							<span class="o-hidden">
+								<span>Front-end Developer</span>
+							</span>
+						</h1>
+					</div>
+				</section>
+				<section id="projects" class="projects flex-column-center h-screen pd-screen">
+					<h2 class="secHead before-title">projects</h2>
+					<div class="listing-projects">
+						<div class="listing-projects-item">
+							<div class="listing-projects-wrapper">
+								<h3 class="listing-title">OMRT Website</h3>
+								<p class="listing-excerpt">A high-performance, Responsive website that uses the power of
+									creative, Greensock (GSAP) & ScrollMagic powered animations for enriching user
+									experience.</p>
+								<a href="https://omrt.tech/" class="listing-btn-readmore underline" target="_blank"
+									rel="noreferrer">visit website</a>
+							</div>
+							<div class="reveller"></div>
+						</div>
+						<div class="listing-projects-item">
+							<div class="listing-projects-wrapper">
+								<h3 class="listing-title">Red And White Website</h3>
+								<p class="listing-excerpt">A high-performance, Responsive & Animations powered by DEV
+								</p>
+								<a href="https://redandwhiteshops.com/" class="listing-btn-readmore underline"
+									target="_blank" rel="noreferrer">visit website</a>
+							</div>
+							<div class="reveller"></div>
+						</div>
+						<div class="listing-projects-item">
+							<div class="listing-projects-wrapper">
+								<h3 class="listing-title">My Portfolio Website</h3>
+								<p class="listing-excerpt">A high-performance, Responsive website that uses the power of
+									creative SVG, Greensock (GSAP) & ScrollMagic powered animations for enriching user
+									experience.</p>
+								<a href="#" class="listing-btn-readmore underline">visit website</a>
+							</div>
+							<div class="reveller"></div>
+						</div>
+					</div>
+					<div class="secEnd" data-text="projects"></div>
+				</section>
+				<section id="experiments" class="experiments">
+					<h2 class="secHead before-title">experiments</h2>
+					<div class="experiments-grid">
+						<a href="#" class="experiment-item" target="_blank" rel="noreferrer">
+							<div class="experiment-mask"></div>
+							<div class="experiment-circle">
+								<figure class="figure-image experiment-image">
+									<div class="image-wrapper">
+										<img src="images/animate-move-infinite-title-text-using-css.gif"
+											alt="animate move infinite title text using css" loading="lazy">
+									</div>
+								</figure>
+							</div>
+							<div class="experiment-content">
+								<h4 class="ex-title">title</h4>
+								<p class="ex-subtitle">Animate move infinite title text using CSS</p>
+							</div>
+						</a>
+						<a href="#" class="experiment-item" target="_blank" rel="noreferrer">
+							<div class="experiment-mask"></div>
+							<div class="experiment-circle">
+								<figure class="figure-image experiment-image">
+									<div class="image-wrapper">
+										<img src="images/underline-effect-hover-using-border-css.gif" alt="underline effect-hover using border css" loading="lazy">
+									</div>
+								</figure>
+							</div>
+							<div class="experiment-content">
+								<h4 class="ex-title">title</h4>
+								<p class="ex-subtitle">Underline effect hover using border CSS</p>
+							</div>
+						</a>
+						<a href="#" class="experiment-item" target="_blank" rel="noreferrer">
+							<div class="experiment-mask"></div>
+							<div class="experiment-circle">
+								<figure class="figure-image experiment-image">
+									<div class="image-wrapper">
+										<img src="images/animate-hamburger.gif" alt="animate-hamburger" loading="lazy">
+									</div>
+								</figure>
+							</div>
+							<div class="experiment-content">
+								<h4 class="ex-title">title</h4>
+								<p class="ex-subtitle">Animate Hamburger</p>
+							</div>
+						</a>
+						<a href="#" class="experiment-item" target="_blank" rel="noreferrer">
+							<div class="experiment-mask"></div>
+							<div class="experiment-circle">
+								<figure class="figure-image experiment-image">
+									<div class="image-wrapper">
+										<img src="images/animate-loading-bubble-infinite.gif" alt="animate loading bubble infinite" loading="lazy">
+									</div>
+								</figure>
+							</div>
+							<div class="experiment-content">
+								<h4 class="ex-title">title</h4>
+								<p class="ex-subtitle">Animate loading bubble infinite</p>
+							</div>
+						</a>
+					</div>
+					<div class="secEnd" data-text="experiments"></div>
+				</section>
+			</div>
+		</main>
+
+		<footer id="site-footer" class="site-footer">
+			<section id="contact" class="contact-me pd-screen pattern-circle pattern-circle-right">
+				<h2 class="title-contactme split">
+					<div class="split-p">
+						<div class="split-c">Wanna</div>
+					</div>
+					<div class="split-p">
+						<div class="split-c">be starting</div>
+					</div>
+					<div class="split-p">
+						<div class="split-c">something ?</div>
+					</div>
+				</h2>
+
+				<span class="desc-contactme split">
+					<div class="split-p">
+						<div class="split-c">Feel free to reach out if you </div>
+					</div>
+					<div class="split-p">
+						<div class="split-c">wanna collaborate with me,</div>
+					</div>
+					<div class="split-p">
+						<div class="split-c">or simply have a chat</div>
+					</div>
+				</span>
+
+				<a href="mailto:doniad.dev@gmail.com" class="contact-email">
+					<span class="underline">
+						doniad.dev@gmail.com
+					</span>
+				</a>
+
+				<div class="contact-footer">
+					<div class="footer-links">
+						<a href="https://www.instagram.com/doniadriannn/" target="_blank" rel="noreferrer">
+							<img src="images/icon-instagram.svg" alt="Call instagram" loading="lazy">
+							<span class="underline">Instagram</span>
+						</a>
+						<a href="mailto:adriandoniproject@gmail.com" target="_blank" rel="noreferrer">
+							<img src="images/icon-mail.svg" alt="Call Mail" loading="lazy">
+							<span class="underline">Email</span>
+						</a>
+						<a href="#" target="_blank" rel="noreferrer">
+							<img src="images/icon-linkedin.svg" alt="Call Linkedin" loading="lazy">
+							<span class="underline">Linkedin</span>
+						</a>
+					</div>
+					<div class="footer-merce">
+						<a href="#" class="underline">Built by Adrian Doni</a>
+					</div>
+				</div>
+			</section>
+		</footer>
+
+	</div>
+
+	<script src="assets/js/app-aos-gsap.js"></script>
+	<script src="assets/js/app.js"></script>
+</body>
+
+</html>

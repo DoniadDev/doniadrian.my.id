@@ -1,0 +1,492 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Playfair+Display:wght@400;500&display=swap');
+
+:root {
+	--main-bg-black: #171717;
+	--main-bg-white: #dfd3c3;
+	--main-bg-gold: #e9b171;
+	--main-bg-salmon: #fa8072;
+	--vh: 9.29px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	box-sizing: border-box;
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	-webkit-backface-visibility: hidden;
+	text-shadow: rgb(0 0 0 / 0%) 0 0 1px;
+	vertical-align: baseline;
+	background-clip: border-box;
+	word-break: break-word;
+}
+
+body {
+	margin: 0;
+	font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	color: var(--main-bg-white);
+	-moz-block-height: normal;
+	line-height: 1.25;
+	letter-spacing: -0.32px;
+	font-size: 16px;
+	font-weight: 500;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	background-color: var(--main-bg-black);
+	word-break: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Playfair Display", 'Constantia', 'Lucida Bright', 'Lucidabright', 'Lucida Serif', 'Lucida', 'DejaVu Serif', 'Bitstream Vera Serif', 'Liberation Serif', 'Georgia', 'serif';
+	font-weight: 500;
+}
+
+h1 {
+	font-weight: 400;
+}
+
+body>.site {
+	width: 100%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-moz-box-orient: vertical;
+	-moz-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+body>.site>.site-main {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 0 auto;
+	-moz-box-flex: 1;
+	-ms-flex: 1 0 auto;
+	flex: 1 0 auto;
+}
+
+img {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: auto;
+	-o-object-fit: cover;
+	object-fit: cover;
+	-o-object-position: center;
+	object-position: center;
+	vertical-align: middle;
+}
+
+a {
+	text-decoration: none;
+	color: var(--main-bg-white);
+	cursor: pointer;
+	cursor: hand;
+	-webkit-transition: .3s;
+	-o-transition: .3s;
+	-moz-transition: .3s;
+	transition: .3s;
+}
+
+button,
+input[type=submit],
+input[type=reset],
+input[type=button] {
+	background: none;
+	border: 0;
+	overflow: visible;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	-webkit-appearance: button;
+}
+
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
+	img {
+		-webkit-mask-image: -webkit-radial-gradient(white, black);
+	}
+}
+
+.container {
+	width: calc(100% - 50px);
+	margin: 0 auto;
+}
+
+.container {
+	max-width: 1440px;
+}
+
+html.prevent-scroll {
+	overflow: hidden;
+}
+
+::selection {
+	background: var(--main-bg-white);
+	color: var(--main-bg-black);
+	text-shadow: none;
+}
+
+
+h1 {
+	font-size: 11.5vw;
+	line-height: 1;
+	letter-spacing: -.595vw;
+	color: var(--main-bg-white);
+	width: 100%;
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb {
+	background: var(--main-bg-white);
+}
+
+::-webkit-scrollbar-track {
+	width: 8px;
+	background: #0c0c0c;
+}
+
+::-webkit-scrollbar-thumb {
+	-webkit-border-radius: 10px;
+	opacity: 1;
+	width: 8px;
+}
+
+/* Effect */
+.underline {
+	text-decoration: none;
+	background-image: linear-gradient(var(--main-bg-white), var(--main-bg-white));
+	background-position: 0 100%;
+	background-repeat: no-repeat;
+	background-size: 100% 2px;
+	padding-bottom: 4px;
+	transition: background-size .3s;
+}
+
+.underline:focus,
+.underline:hover {
+	background-size: 0 2px;
+}
+
+.reveller {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background: var(--main-bg-gold);
+	-webkit-backface-visibility: hidden;
+	z-index: -1;
+}
+
+.split .split-p {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.split.is-inview .split-p {
+	opacity: 1;
+	visibility: visible;
+}
+
+
+/* Loader */
+.loader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 50;
+	background: var(--main-bg-black);
+}
+
+#percent {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	width: 100%;
+	color: var(--main-bg-white);
+	font-size: 8.5vw;
+	mix-blend-mode: difference;
+}
+
+#bar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100%;
+}
+
+#barconfirm {
+	width: 0%;
+	height: 100vh;
+	background: var(--main-bg-white);
+}
+
+.main-page {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+}
+
+
+/* Particle CSS */
+#galaxy {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	width: 100%;
+	height: 100%;
+	opacity: .15;
+}
+
+#galaxy,
+#galaxy .bg {
+	width: 100%;
+	height: 100%;
+}
+
+#galaxy * {
+	position: absolute;
+}
+
+#galaxy .bg.center {
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 200px;
+	margin: -100px 0 0 -200px;
+	opacity: 0.8;
+	-webkit-border-radius: 500px;
+	-moz-border-radius: 500px;
+	border-radius: 500px;
+}
+
+#galaxy [class^="stars"] {
+	top: -50%;
+	left: -50%;
+	width: 200%;
+	height: 200%;
+}
+
+#galaxy .stars-back {
+	background: url('/images/pattern-particles-back.png');
+	-webkit-animation: orbit-clock-wise 440s infinite linear;
+	-moz-animation: orbit-clock-wise 440s infinite linear;
+	-o-animation: orbit-clock-wise 440s infinite linear;
+	-ms-animation: orbit-clock-wise 440s infinite linear;
+	animation: orbit-clock-wise 440s infinite linear;
+}
+
+#galaxy .stars-middle {
+	background: url('/images/pattern-particles-middle.png');
+	-webkit-animation: orbit-counter-clock-wise 360s infinite linear;
+	-moz-animation: orbit-counter-clock-wise 360s infinite linear;
+	-o-animation: orbit-counter-clock-wise 360s infinite linear;
+	-ms-animation: orbit-counter-clock-wise 360s infinite linear;
+	animation: orbit-counter-clock-wise 360s infinite linear;
+}
+
+#galaxy .stars-front {
+	background: url('/images/pattern-particles-front.png');
+	-webkit-animation: orbit-clock-wise 160s infinite linear;
+	-moz-animation: orbit-clock-wise 160s infinite linear;
+	-o-animation: orbit-clock-wise 160s infinite linear;
+	-ms-animation: orbit-clock-wise 160s infinite linear;
+	animation: orbit-clock-wise 160s infinite linear;
+}
+
+@-webkit-keyframes orbit-clock-wise {
+	0% {
+		opacity: 0.4;
+		-webkit-transform: rotate(0deg);
+	}
+
+	2% {
+		opacity: 0.8;
+	}
+
+	4% {
+		opacity: 0.2;
+	}
+
+	5% {
+		opacity: 0.8;
+	}
+
+	100% {
+		opacity: 0.4;
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes orbit-counter-clock-wise {
+	from {
+		-webkit-transform: rotate(360deg);
+	}
+
+	to {
+		-webkit-transform: rotate(0deg);
+	}
+}
+
+@-moz-keyframes orbit-clock-wise {
+	0% {
+		opacity: 0.4;
+		-moz-transform: rotate(0deg);
+	}
+
+	2% {
+		opacity: 0.8;
+	}
+
+	4% {
+		opacity: 0.2;
+	}
+
+	5% {
+		opacity: 0.8;
+	}
+
+	100% {
+		opacity: 0.4;
+		-moz-transform: rotate(360deg);
+	}
+}
+
+@-moz-keyframes orbit-counter-clock-wise {
+	from {
+		-moz-transform: rotate(360deg);
+	}
+
+	to {
+		-moz-transform: rotate(0deg);
+	}
+}
+
+@-o-keyframes orbit-clock-wise {
+	0% {
+		opacity: 0.4;
+		-o-transform: rotate(0deg);
+	}
+
+	2% {
+		opacity: 0.8;
+	}
+
+	4% {
+		opacity: 0.2;
+	}
+
+	5% {
+		opacity: 0.8;
+	}
+
+	100% {
+		opacity: 0.4;
+		-o-transform: rotate(360deg);
+	}
+}
+
+@-o-keyframes orbit-counter-clock-wise {
+	from {
+		-o-transform: rotate(360deg);
+	}
+
+	to {
+		-o-transform: rotate(0deg);
+	}
+}
+
+@-ms-keyframes orbit-clock-wise {
+	0% {
+		opacity: 0.4;
+		-ms-transform: rotate(0deg);
+	}
+
+	2% {
+		opacity: 0.8;
+	}
+
+	4% {
+		opacity: 0.2;
+	}
+
+	5% {
+		opacity: 0.8;
+	}
+
+	100% {
+		opacity: 0.4;
+		-ms-transform: rotate(360deg);
+	}
+}
+
+@-ms-keyframes orbit-counter-clock-wise {
+	from {
+		-ms-transform: rotate(360deg);
+	}
+
+	to {
+		-ms-transform: rotate(0deg);
+	}
+}
+
+@keyframes orbit-clock-wise {
+	0% {
+		opacity: 0.4;
+		transform: rotate(0deg);
+	}
+
+	2% {
+		opacity: 0.8;
+	}
+
+	4% {
+		opacity: 0.2;
+	}
+
+	5% {
+		opacity: 0.8;
+	}
+
+	100% {
+		opacity: 0.4;
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes orbit-counter-clock-wise {
+	from {
+		transform: rotate(360deg);
+	}
+
+	to {
+		transform: rotate(0deg);
+	}
+}
