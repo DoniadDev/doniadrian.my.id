@@ -308,6 +308,22 @@
 	overflow: hidden;
 }
 
+.intro:after {
+	content: "";
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgb(23, 23, 23);
+	background: -moz-linear-gradient(0deg, rgba(23, 23, 23, 1) 0%, rgba(255, 255, 255, 0) 15%);
+	background: -webkit-linear-gradient(0deg, rgba(23, 23, 23, 1) 0%, rgba(255, 255, 255, 0) 15%);
+	background: linear-gradient(0deg, rgba(23, 23, 23, 1) 0%, rgba(255, 255, 255, 0) 15%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#171717", endColorstr="#ffffff", GradientType=1);
+}
+
 .intro #particles-js {
 	position: absolute;
 	top: 0;
@@ -612,6 +628,26 @@
 }
 
 
+/* Aboutme */
+.about-me {
+	padding-top: 15vh;
+	padding-bottom: 10vh;
+}
+
+.about-me h2.title-aboutme {
+    font-size: 7.8571428571vw;
+    line-height: .9;
+}
+
+.about-me  span.subtitle-aboutme {
+    display: block;
+    font-size: 1.4285714286vw;
+    font-weight: 300;
+    line-height: 1;
+    color: #58534c;
+}
+
+
 
 /* All Font */
 .contact-footer,
@@ -627,6 +663,17 @@
 @media all and (min-width: 1199px) {
 	.hamburger {
 		display: none;
+	}
+}
+
+@media all and (max-width: 1599px) {
+	.pd-screen {
+		padding-left: 8.333vw;
+		padding-right: 8.333vw;
+	}
+
+	.contact-me .contact-email {
+		margin-right: 8.333vw;
 	}
 }
 
