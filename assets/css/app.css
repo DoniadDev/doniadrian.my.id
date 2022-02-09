@@ -357,6 +357,7 @@
 	font-size: 20px;
 	display: block;
 	padding: 24px;
+	mix-blend-mode: difference;
 }
 
 .listing-projects-wrapper .listing-title {
@@ -632,19 +633,48 @@
 .about-me {
 	padding-top: 15vh;
 	padding-bottom: 10vh;
+	margin-bottom: 50vh;
 }
 
 .about-me h2.title-aboutme {
-    font-size: 7.8571428571vw;
-    line-height: .9;
+	font-size: 7.8571428571vw;
+	line-height: .9;
 }
 
-.about-me  span.subtitle-aboutme {
-    display: block;
-    font-size: 1.4285714286vw;
-    font-weight: 300;
-    line-height: 1;
-    color: #58534c;
+.about-me h2.title-aboutme,
+.about-me span.subtitle-aboutme {
+	margin-left: 5vw;
+}
+
+.about-me span.subtitle-aboutme {
+	display: block;
+	font-size: 1.4285714286vw;
+	font-weight: 300;
+	line-height: 1;
+	color: #58534c;
+}
+
+.about-me .profile-image {
+	position: relative;
+	z-index: -1;
+	width: 26.714vw;
+	margin: 0 auto;
+}
+
+.about-me h2.title-aboutme-a {
+	position: relative;
+	padding-top: 4.63vh;
+	z-index: -2;
+}
+
+.about-me h2.title-aboutme-b {
+    margin-left: 40vw;
+}
+
+.about-me .profile-image .image-wrapper {
+	position: absolute;
+	top: 0;
+	width: 100%;
 }
 
 
