@@ -26,14 +26,18 @@
 
 <body>
 	<div id="page" class="site">
-		<div class="loader">
-			<div class="progress">
-				<div id="bar">
-					<div id="barconfirm">0%</div>
-				</div>
-				<div id="percent"></div>
+
+		<div class="loading-screen">
+			<div class="loading-section">
+				<div class="title">Adrian</div>
+				<div class="bracket bracket1">[</div>
+				<div id="loader"></div>
+				<div class="bracket bracket2">]</div>
+				<div class="title">Doni</div>
 			</div>
 		</div>
+
+		<div id="movie-bg"></div>
 
 		<div id="site-header" class="site-header">
 			<a class="logo-branding link" name="Home" href="/">
@@ -51,7 +55,7 @@
 					</nav>
 				</div>
 			</div>
-			
+
 
 			<button id="hamburger" aria-pressed="false" class="hamburger btn-toggle-state">
 				<span class="first"></span>
@@ -63,14 +67,6 @@
 		<main id="site-main" class="site-main">
 			<div class="entry-content">
 				<section class="intro flex-center h-screen">
-
-					<div id="galaxy">
-						<div class="bg"></div>
-						<div class="stars-back"></div>
-						<div class="stars-middle"></div>
-						<div class="stars-front"></div>
-						<div class="bg center"></div>
-					</div>
 
 					<div class="intro-content">
 						<span class="date-edition">· hello world! ·</span>
@@ -89,7 +85,7 @@
 					<div class="listing-projects">
 						<div class="listing-projects-item">
 							<div class="listing-projects-wrapper">
-								<h3 class="listing-title">OMRT Website</h3>
+								<h3 class="listing-title">Red and white</h3>
 								<p class="listing-excerpt">A high-performance, Responsive website that uses the power of
 									creative, Greensock (GSAP) & ScrollMagic powered animations for enriching user
 									experience.</p>
@@ -121,7 +117,7 @@
 					</div>
 					<div class="secEnd" data-text="projects"></div>
 				</section>
-				<section id="about" class="about-me h-screen pd-screen delayed-section">
+				<section id="about" class="about-me pd-screen">
 					<span class="subtitle-aboutme split">
 						<div class="split-p">
 							<div class="split-c">What's up!</div>
@@ -134,15 +130,11 @@
 						<div class="split-p">
 							<div class="split-c">know me</div>
 						</div>
-						<div class="split-p">
-							<div class="split-c">better</div>
-						</div>
 					</h2>
 
 					<figure class="figure-image profile-image innerContainer">
 						<div class="image-wrapper">
-							<img src="images/misterious-man.jpg"
-								alt="misterious man" loading="lazy">
+							<img src="images/misterious-man.jpg" alt="misterious man" loading="lazy">
 						</div>
 					</figure>
 
@@ -154,6 +146,21 @@
 							<div class="split-c">better</div>
 						</div>
 					</h2>
+				</section>
+				<section class="content-aboutme">
+					<h2 class="split">
+						<div class="split-p">
+							<div class="split-c">Hello! I'm Doni Adrian.</div>
+						</div>
+						<div class="split-p">
+							<div class="split-c">A software engineer based in Indonesia.</div>
+						</div>
+						<div class="split-p">
+							<div class="split-c">And also as a WordPress Developer.</div>
+						</div>
+					</h2>
+					<!-- <p>Hello I'm Doni. A software engineer based in Indonesia. Currently working at <a href="#" class="underline" target="_blank" rel="noreferrer">Whello</a> as Front-end
+						Developer. And also as a WordPress Developer.</p> -->
 				</section>
 				<section id="experiments" class="experiments">
 					<h2 class="secHead before-title">experiments</h2>
@@ -178,7 +185,8 @@
 							<div class="experiment-circle">
 								<figure class="figure-image experiment-image">
 									<div class="image-wrapper">
-										<img src="images/underline-effect-hover-using-border-css.gif" alt="underline effect-hover using border css" loading="lazy">
+										<img src="images/underline-effect-hover-using-border-css.gif"
+											alt="underline effect-hover using border css" loading="lazy">
 									</div>
 								</figure>
 							</div>
@@ -206,7 +214,8 @@
 							<div class="experiment-circle">
 								<figure class="figure-image experiment-image">
 									<div class="image-wrapper">
-										<img src="images/animate-loading-bubble-infinite.gif" alt="animate loading bubble infinite" loading="lazy">
+										<img src="images/animate-loading-bubble-infinite.gif"
+											alt="animate loading bubble infinite" loading="lazy">
 									</div>
 								</figure>
 							</div>
@@ -247,39 +256,36 @@
 					</div>
 				</span>
 
-				<a href="mailto:doniad.dev@gmail.com" class="contact-email">
+				<a href="mailto:doni.whello@gmail.com" class="contact-email">
 					<span class="underline">
-						doniad.dev@gmail.com
+						doni@whello.id
 					</span>
 				</a>
-
+			</section>
+			<section class="section-copyright pd-screen">
 				<div class="contact-footer">
-					<div class="footer-links">
-						<a href="https://www.instagram.com/doniadriannn/" target="_blank" rel="noreferrer">
-							<img src="images/icon-instagram.svg" alt="Call instagram" loading="lazy">
-							<span class="underline">Instagram</span>
-						</a>
-						<a href="mailto:adriandoniproject@gmail.com" target="_blank" rel="noreferrer">
-							<img src="images/icon-mail.svg" alt="Call Mail" loading="lazy">
-							<span class="underline">Email</span>
-						</a>
-						<a href="#" target="_blank" rel="noreferrer">
-							<img src="images/icon-linkedin.svg" alt="Call Linkedin" loading="lazy">
-							<span class="underline">Linkedin</span>
-						</a>
-					</div>
-					<div class="footer-merce">
-						<a href="#" class="underline">Built by Adrian Doni</a>
-					</div>
+					<ul class="footer-social">
+						<li class="social-item"><a href="#" class="underline" target="_blank" rel="noreferrer">Facebook</a></li>
+						<li class="social-item"><a href="#" class="underline" target="_blank" rel="noreferrer">Instagram</a></li>
+						<li class="social-item"><a href="#" class="underline" target="_blank" rel="noreferrer">Linkedin</a></li>
+						<li class="social-item"><a href="#" class="underline" target="_blank" rel="noreferrer">Codepen</a></li>
+					</ul>
+					<ul class="footer-side">
+						<li class="footerside-item"><button id="colored-version" class="colored-version">colored version</button></li>
+						<li class="footerside-item"><button id="inspect-me" class="inspect-me">inspect me!</button></li>
+						<li class="footerside-item"><button id="btn-backtop" class="btn-backtop">back to top</button></li>
+					</ul>
+
 				</div>
 			</section>
 		</footer>
 
 	</div>
 
-	<script src="assets/js/app-split-gsap.js"></script>
-	<script src="assets/js/app-general-gsap.js"></script>
-	<script src="assets/js/app-aos-gsap.js"></script>
+	<!-- <script src="assets/js/app-split-gsap.js"></script>
+	<script src="assets/js/app-general-gsap.js"></script> -->
+	<!-- <script src="assets/js/app-aos-gsap.js"></script> -->
+	<script src="assets/js/script.js"></script>
 	<script src="assets/js/app.js"></script>
 </body>
 

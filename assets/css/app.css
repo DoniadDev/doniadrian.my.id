@@ -12,7 +12,9 @@
 	user-select: none;
 	pointer-events: none;
 	padding-bottom: 20px;
+	padding-top: 6.8vh;
 	transition: .3s;
+	background: linear-gradient(180deg, var(--main-bg-black), rgba(22, 22, 22, 0));
 }
 
 .site-header {
@@ -26,7 +28,6 @@
 	position: relative;
 	pointer-events: auto;
 	display: inline-block;
-	margin-top: 6.8vh;
 	margin-left: 8.333vw;
 	z-index: 100;
 }
@@ -65,16 +66,19 @@
 	}
 }
 
-.main-nav {
+.site-menu {
 	pointer-events: auto;
+	margin-right: 8.333vw;
+}
+
+.main-nav {
 	display: -webkit-inline-box;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	margin-top: 6.8vh;
-	margin-right: 8.333vw;
+
 }
 
 .main-nav a:not(:last-child) {
@@ -88,6 +92,10 @@
 }
 
 /* General */
+.split .split-p {
+    overflow: hidden;
+}
+
 .link {
 	text-decoration: none;
 	position: relative;
@@ -278,12 +286,12 @@
 .intro .o-hidden:first-child {
 	position: relative;
 	z-index: -2;
-	text-align: center;
+	text-align: left;
 }
 
 .intro .o-hidden:last-child {
 	position: relative;
-	text-align: center;
+	text-align: right;
 	margin-top: 2vh;
 	z-index: 10;
 }
@@ -291,11 +299,17 @@
 .intro .date-edition {
 	display: block;
 	text-align: center;
-	font-size: 14px;
+	font-size: 18px;
 	line-height: 1;
 	letter-spacing: 0;
 	text-transform: uppercase;
 	color: var(--main-bg-gold);
+}
+
+.intro-content .date-edition {
+	position: absolute;
+	right: 27vw;
+	top: 13vh;
 }
 
 .intro-content {
@@ -306,22 +320,6 @@
 .intro {
 	position: relative;
 	overflow: hidden;
-}
-
-.intro:after {
-	content: "";
-	display: inline-block;
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background: rgb(23, 23, 23);
-	background: -moz-linear-gradient(0deg, rgba(23, 23, 23, 1) 0%, rgba(255, 255, 255, 0) 15%);
-	background: -webkit-linear-gradient(0deg, rgba(23, 23, 23, 1) 0%, rgba(255, 255, 255, 0) 15%);
-	background: linear-gradient(0deg, rgba(23, 23, 23, 1) 0%, rgba(255, 255, 255, 0) 15%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#171717", endColorstr="#ffffff", GradientType=1);
 }
 
 .intro #particles-js {
@@ -361,7 +359,6 @@
 }
 
 .listing-projects-wrapper .listing-title {
-	font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 	font-size: 24px;
 	margin-bottom: 14px;
 }
@@ -553,7 +550,8 @@
 	right: calc((100vw - 1440px) / 2);
 	bottom: 28.45vh;
 	color: var(--main-bg-white);
-	font-size: 2.2vw;
+	font-size: 2.5vw;
+	font-weight: bold;
 	line-height: 1.2;
 	background: 0 0;
 	border: none;
@@ -593,7 +591,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	font-size: 14px;
+	font-size: 18px;
 	font-weight: 400;
 	line-height: 1;
 }
@@ -629,11 +627,56 @@
 }
 
 
+/* Copyright */
+.contact-footer ul {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	list-style: none;
+}
+
+.contact-footer .underline {
+	background-image: linear-gradient(var(--main-bg-black), var(--main-bg-black));
+}
+
+.section-copyright {
+	background-color: var(--main-bg-white);
+	color: var(--main-bg-black);
+	padding-top: 10vh;
+	padding-bottom: 10vh;
+}
+
+.contact-footer a {
+	color: var(--main-bg-black);
+}
+
+.contact-footer ul li:not(:last-child) {
+	margin-right: 26px;
+}
+
+.contact-footer .footer-side button {
+	font-size: 18px;
+	-webkit-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
+}
+
+.contact-footer .footer-side button:hover {
+	letter-spacing: 0.05rem;
+}
+
+.footer-side .colored-version,
+.footer-side .inspect-me {
+	opacity: 0.5;
+}
+
+
+
 /* Aboutme */
 .about-me {
 	padding-top: 15vh;
 	padding-bottom: 10vh;
-	margin-bottom: 50vh;
+	margin-bottom: 5vh;
 }
 
 .about-me h2.title-aboutme {
@@ -668,7 +711,8 @@
 }
 
 .about-me h2.title-aboutme-b {
-    margin-left: 40vw;
+	margin-left: 40vw;
+	margin-top: 25vw;
 }
 
 .about-me .profile-image .image-wrapper {
@@ -677,6 +721,17 @@
 	width: 100%;
 }
 
+.content-aboutme h2 {
+    display: block;
+    width: 78vw;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 300;
+    font-size: 5.7142857143vw;
+    line-height: 1.05;
+}
+
+
 
 
 /* All Font */
@@ -684,7 +739,7 @@
 .secEnd:after,
 .contact-me .desc-contactme,
 .contact-me .contact-email {
-	font-family: "Playfair Display", 'Constantia', 'Lucida Bright', 'Lucidabright', 'Lucida Serif', 'Lucida', 'DejaVu Serif', 'Bitstream Vera Serif', 'Liberation Serif', 'Georgia', 'serif';
+	font-family: "Merriweather", 'Constantia', 'Lucida Bright', 'Lucidabright', 'Lucida Serif', 'Lucida', 'DejaVu Serif', 'Bitstream Vera Serif', 'Liberation Serif', 'Georgia', 'serif';
 }
 
 
@@ -708,13 +763,17 @@
 }
 
 @media all and (max-width: 1199px) {
+
+	.site-header {
+		padding-top: 4.8vh;
+	}
+
 	.hamburger {
-		margin-top: 4.8vh;
+		margin-top: 0px;
 		margin-right: 5.333vw;
 	}
 
 	.site-header .logo-branding {
-		margin-top: 4.8vh;
 		margin-left: 5.333vw;
 	}
 
@@ -741,15 +800,16 @@
 	.site-menu {
 		pointer-events: auto;
 		width: 100%;
+		max-width: 450px;
 		height: 100%;
 		position: fixed;
 		top: 0;
-		left: 0;
 		right: 0;
 		bottom: 0;
 		z-index: 99;
 		overflow: hidden;
 		display: none;
+		margin-right: 0px;
 	}
 
 	.site-header.toggle-onactive .site-menu {
@@ -778,8 +838,8 @@
 	}
 
 	.projects,
-	.experiments,
-	.contact-me {
+	.contact-me,
+	.pd-screen {
 		padding-left: 5.333vw;
 		padding-right: 5.333vw;
 	}
@@ -791,5 +851,21 @@
 
 	.site-header.site-header.toggle-onactive #galaxy {
 		opacity: .3;
+	}
+}
+
+@media all and (max-width: 900px) {
+	.experiment-item {
+		width: 50%;
+	}
+}
+
+@media all and (max-width: 600px) {
+	.site-menu {
+		max-width: 85%;
+	}
+
+	.experiment-item {
+		width: 100%;
 	}
 }

@@ -2,6 +2,24 @@
 (function ($) {
 
     $(document).ready(function () {
+
+        // Back to top
+        $("#btn-backtop").click(function () {
+            $("html, body").animate({scrollTop: 0}, 1000);
+         });
+            
+
+        // Click Colored Version
+        $("#colored-version").on("click", function (e) {
+            e.preventDefault();
+            $("html").toggleClass("colored-active");
+        });
+
+        // Click Inspect Me!
+        $("#inspect-me").on("click", function (e) {
+            e.preventDefault();
+            $("body").toggleClass("inspect-active");
+        });
         
         // Click Hamburger
         $(".btn-toggle-state").on("click", function (e) {
@@ -40,8 +58,8 @@
             var marginTop = 80;
         }
 
-        $(document).on('click', 'a[href^="#"]', function (event) {
-            event.preventDefault();
+        $(document).on('click', 'a[href^="#"]', function (e) {
+            e.preventDefault();
 
             $('html, body').animate({
                 scrollTop: ($(jQuery.attr(this, 'href')).offset().top - marginTop)
